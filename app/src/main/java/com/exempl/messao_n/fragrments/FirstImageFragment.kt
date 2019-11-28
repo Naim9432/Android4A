@@ -31,7 +31,6 @@ class FirstImageFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerCli
     private val imageUrl = "https://www.numerama.com/content/uploads/2019/05/trou-noir-espace-univers-astronomie.jpg"
 
     private lateinit var mMap: GoogleMap
-    private lateinit var fusedLocationClient: FusedLocationProviderClient
 
     private fun LoadingMap() {
 
@@ -39,7 +38,6 @@ class FirstImageFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerCli
         val mapFragment = childFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
-        //fusedLocationClient = LocationServices.getFusedLocationProviderClient()
     }
 
 
@@ -52,15 +50,13 @@ class FirstImageFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerCli
         fun newInstance() = FirstImageFragment()
     }
 
-    companion object {
-       private const val LOCATION_PERMISSION_REQUEST_CODE = 1
-    }
+       private  val LOCATION_PERMISSION_REQUEST_CODE = 1  // Initialement mit dans un companion object mais ne fonctionnait pas...
 
     private fun setUpMap() {
-        if (ActivityCompat.checkSelfPermission(this,
+        if (ActivityCompat.checkSelfPermission(activity!!,
                 android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this,
-                arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION), 1)
+            ActivityCompat.requestPermissions(activity!!,
+    arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION), LOCATION_PERMISSION_REQUEST_CODE)
             return
         }
     }
@@ -85,9 +81,7 @@ class FirstImageFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerCli
      */
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
-
-        // Add a marker in Sydney and move the camera
-        val myPlace = LatLng(40.73, -73.99)  // this is New York
+        val myPlace = LatLng(48.866667, 2.333333)  // Paris
         mMap.addMarker(MarkerOptions().position(myPlace).title("My Favorite City"))
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(myPlace, 12.0f))
         mMap.getUiSettings().setZoomControlsEnabled(true)
