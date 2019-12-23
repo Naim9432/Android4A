@@ -26,8 +26,6 @@ import java.util.*
 
 class SecondImageFragment : Fragment() {
 
-    class MainActivity : AppCompatActivity() {
-
         val CITY: String = "Paris,FR"
         val API: String = "1687f993de414bc909d55ce66fe2821b"
 
