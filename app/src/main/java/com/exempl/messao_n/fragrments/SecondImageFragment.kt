@@ -26,6 +26,7 @@ import java.util.*
 
 class SecondImageFragment : Fragment() {
 
+
         val CITY: String = "Paris,FR"
         val API: String = "1687f993de414bc909d55ce66fe2821b"
 
@@ -34,8 +35,6 @@ class SecondImageFragment : Fragment() {
             setContentView(R.layout.activity_main)
 
             weatherTask().execute()
-
-        }
 
         inner class weatherTask() : AsyncTask<String, Void, String>() {
             override fun onPreExecute() {

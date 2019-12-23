@@ -13,10 +13,10 @@
             android:gravity="center">
             <TextView android:id="@+id/address" android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:textSize="24dp"
-                android:text="DHAKA, BD"/>
+                android:text="PARIS, FR"/>
             <TextView android:id="@+id/updated_at" android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:textSize="14dp"
-                android:text="20 April 2012, 20:08 PM"/>
+                android:text="20 Décembre 2019, 11:30 PM"/>
         </LinearLayout>
 
 
@@ -31,7 +31,7 @@
             <TextView android:id="@+id/temp" android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:textSize="90dp"
                 android:fontFamily="sans-serif-thin" android:layout_gravity="center"
-                android:text="29°C"/>
+                android:text="12°C"/>
 
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:orientation="horizontal" android:gravity="center">
@@ -62,7 +62,7 @@
                         android:textSize="12dp" android:text="Sunrise"/>
                     <TextView android:id="@+id/sunrise" android:layout_width="wrap_content"
                         android:layout_height="wrap_content" android:textSize="14dp"
-                        android:text="06:40 AM"/>
+                        android:text="08:04 AM"/>
                 </LinearLayout>
                 <Space android:layout_width="10dp" android:layout_height="wrap_content"/>
                 <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
@@ -76,7 +76,7 @@
                         android:textSize="12dp" android:text="Sunset"/>
                     <TextView android:id="@+id/sunset" android:layout_width="wrap_content"
                         android:layout_height="wrap_content" android:textSize="14dp"
-                        android:text="06:40 AM"/>
+                        android:text="05:22 AM"/>
                 </LinearLayout>
                 <Space android:layout_width="10dp" android:layout_height="wrap_content"/>
                 <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
