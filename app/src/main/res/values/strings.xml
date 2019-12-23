@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Fragrments</string>
+    <string name="app_name">Map and meteo</string>
     <string name="first_image">Première image</string>
     <string name="second_image">Deuxième image</string>
     <string name="drawer_open">Open Navigation Drawer</string>
